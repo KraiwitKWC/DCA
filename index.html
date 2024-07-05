@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCA Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>DCA Interest Calculator</h1>
+        <form id="calculator-form">
+            <label for="principal">Initial Investment (THB):</label>
+            <input type="number" id="principal" required>
+
+            <label for="rate">Interest Rate (% per year):</label>
+            <input type="number" id="rate" step="0.01" required>
+
+            <label for="years">Number of Years:</label>
+            <input type="number" id="years" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+        <div class="results">
+            <canvas id="resultsChart"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
