@@ -11,21 +11,30 @@
     <div class="container">
         <h1>DCA Interest Calculator</h1>
         <form id="calculator-form">
-            <label for="principal">Initial Investment (THB):</label>
-            <input type="number" id="principal" required>
+            <label for="principal">Monthly Investment (THB):</label>
+            <input type="number" id="principal" step="1000"  required>
 
             <label for="rate">Interest Rate (% per year):</label>
-            <input type="number" id="rate" step="0.01" required>
+            <input type="number" id="rate" step="1" required>
 
             <label for="years">Number of Years:</label>
-            <input type="number" id="years" required>
+            <input type="number" id="years" step="1"  required>
 
             <button type="submit">Calculate</button>
         </form>
         <div class="results">
             <canvas id="resultsChart"></canvas>
         </div>
+        <button id="showPopup" style="display: none;">Show Detailed Graph</button>
     </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <canvas id="popupChart"></canvas>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
